@@ -30,7 +30,7 @@ public class ListNode {
 		ListNode header = this;
 		while(header != null){
 			size++;
-			header = header.getNext();
+			header = header.getNext(); 
 		}
 		return size;
 	}
@@ -60,11 +60,13 @@ public class ListNode {
 	public ListNode deleteLinkedList(int position){
 		
 		ListNode head = this;
+		
 		//position은 1보다 커야 하며 현재 리스트 사이즈보다 클수 없다.
 		if(position > listLength() || position < 1){
 			System.err.println("Inavalid Postion " + listLength());
 			return this;
 		}
+		
 		//position이 1이면 현재 포지션다음 노드가 head가 된다.
 		if(position == 1){
 			ListNode newHead = this.getNext();
